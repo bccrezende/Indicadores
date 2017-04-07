@@ -12,7 +12,13 @@
         <link rel = "stylesheet" href = "<?php echo BASEURL; ?>css/header.css">
         <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
-        <script src="<?php echo BASEURL; ?>js/mostrar_info.js"></script>
+        <script>
+            function Mudarestado(id) {
+                e = document.getElementById(id);
+                alert(e);
+                document.getElementById("comercial").style.display = "none";
+            }
+        </script>
 
         <?php
         // A sessão precisa ser iniciada em cada página diferente
@@ -25,20 +31,21 @@
             session_destroy();
             header("Location: index.php");
             exit;
-        } else {          
+        } else {
+            echo"<script>Mudarestado()</script>";
             $nivel = ($_SESSION['UsuarioNivel']);
             echo $nivel;
-            
+
             //Admin
-            if ($nivel == 0){
+            if ($nivel == 0) {
                 
             }
             //Comercial
-            if ($nivel == 1){
+            if ($nivel == 1) {
                 
             }
             //Qualidade
-            if ($nivel == 2){
+            if ($nivel == 2) {
                 
             }
         }

@@ -1,5 +1,6 @@
 function Mudarestado(id){
-    document.getElementById(id).style.display = "block";    
+    alert('Testando');
+    //document.getElementById(id).style.display = "block";    
 }
 
 
