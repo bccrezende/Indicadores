@@ -1,5 +1,7 @@
 </main> <!-- /container -->
 
+
+<?php echo"<script>Mudarestado(".$nivel.")</script>";?>
 <footer style="padding-left: 8em;">
     <hr>
     <p>&copy;2017 - Bárbara Rezende</p>

@@ -41,6 +41,7 @@
             exit;
         } else {
             $nivel = ($_SESSION['UsuarioNivel']);
+            
         }
         ?>
     </head>
@@ -79,9 +80,8 @@
 
                         </li>
                     </ul>
-                </div>
-                <a href = "<?php session_destroy(); echo BASEURL; ?>/index.php" class="navbar-link">Sair</a>
-                <button id="btnExibe" class="btn" onclick="Mudarestado(0);">Exibir</button>
+                </div><!--/.navbar-collapse -->
+                <a href = "<?php session_destroy(); echo BASEURL; ?>/index.php" class="navbar-link">Sair</a>               
             </div>
         </nav>
 

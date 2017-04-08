@@ -160,10 +160,7 @@
                     }]
             });
         </script>  
-
-
-
-       
+      
     </body>
      <?php include(FOOTER_TEMPLATE); ?>
 </html>
