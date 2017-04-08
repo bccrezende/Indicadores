@@ -1,9 +1,24 @@
 #graf_faturamento{
     display:none; 
+    width: 250em; 
+    height: 400px; 
+    margin: 25em auto;    
 }
 #graf_proposta{
     display: none;
+    width: 250em; 
+    height: 400px; 
+    margin: 0 auto;    
 }
-.card text-center{
-    margin-top: 150px;
+#graf_reprova{
+    display: none;
+    width: 250em; 
+    height: 400px; 
+    margin: 0 auto;    
+}
+#graf_garantia{
+    display: none;
+    width: 250em; 
+    height: 400px; 
+    margin: 0 auto;    
 }

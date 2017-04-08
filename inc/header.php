@@ -46,8 +46,8 @@
                                 Comercial <span class = "caret"></span>
                             </a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "<?php echo BASEURL; ?>customers">Faturamento</a></li>
-                                <li><a href = "<?php echo BASEURL; ?>customers/add.php">Propostas Enviadas</a></li>
+                                <li><a href = "#">Clientes</a></li>
+                                <li><a href = "#">Proposta Comercial</a></li>
                             </ul>
                         </li>
                         <li class = "dropdown" id="qualidade">
@@ -55,12 +55,12 @@
                                 Qualidade <span class = "caret"></span>
                             </a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "<?php echo BASEURL; ?>customers">Indice de Reprova</a></li>
-                                <li><a href = "<?php echo BASEURL; ?>customers/add.php">Garantia</a></li>
+                                <li><a href = "#">Controle de Reprovas</a></li>
+                                <li><a href = "#">Garantia</a></li>
                             </ul>
 
                         </li>
-                        <li class = "dropdown" id="sair">
+                        <li class = "nav navbar-nav" id="sair">
                             <a href = "<?php session_destroy();echo BASEURL; ?>" role = "button" aria-haspopup = "true" aria-expanded = "false">
                                 Sair <span class = "caret"></span>
                             </a>

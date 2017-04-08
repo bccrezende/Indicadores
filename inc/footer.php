@@ -2,7 +2,7 @@
 
 
 
-<footer style="padding-left: 8em;">
+<footer style="padding-left: 4em;">
     <hr>
     <p>&copy;2017 - Bárbara Rezende</p>
 </footer>
