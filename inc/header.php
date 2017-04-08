@@ -12,9 +12,19 @@
         <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
         <script>
-            function Mudarestado(id) {
-                e = document.getElementById(id);
-                document.getElementById("comercial").style.display = "none";
+            function Mudarestado(nivel) {
+                var nivel = nivel;
+                alert (nivel);
+                if (nivel === 0){
+                    alert ('zero');
+                    document.getElementById("graf_faturamento").style.display = "block";
+                    document.getElementById("graf_proposta").style.display = "block";
+                } 
+                if (nivel === 1){
+                    alert ('um');
+                    document.getElementById("graf_proposta").style="display:block";
+                } 
+                
             }
         </script>
 
@@ -30,22 +40,8 @@
             header("Location: index.php");
             exit;
         } else {
-            echo"<script>Mudarestado()</script>";
             $nivel = ($_SESSION['UsuarioNivel']);
-            echo $nivel;
-
-            //Admin
-            if ($nivel == 0) {
-                
-            }
-            //Comercial
-            if ($nivel == 1) {
-                
-            }
-            //Qualidade
-            if ($nivel == 2) {
-                
-            }
+            echo"<script>Mudarestado(".$nivel.")</script>";
         }
         ?>
     </head>
@@ -85,7 +81,8 @@
                         </li>
                     </ul>
                 </div><!--/.navbar-collapse -->
-                <a href = "<?php echo BASEURL; ?>/index.php" class="navbar-link">Sair</a>
+                <a href = "<?php session_destroy(); echo BASEURL; ?>/index.php" class="navbar-link">Sair</a>
+                <button id="btnExibe" class="btn" onclick="Mudarestado(0);">Exibir</button>
             </div>
         </nav>
 

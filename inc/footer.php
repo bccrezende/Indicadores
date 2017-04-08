@@ -1,7 +1,6 @@
 </main> <!-- /container -->
-<link rel="stylesheet" href="<?php echo BASEURL; ?>css/footer.css">
 
-<footer class="container footer">
+<footer style="padding-left: 8em;">
     <hr>
     <p>&copy;2017 - Bárbara Rezende</p>
 </footer>
