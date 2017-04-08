@@ -5,7 +5,7 @@
         <title>Indicadores</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="http://code.highcharts.com/highcharts.js"></script>
-
+        <script src="js/mudar_estado.js"></script>
 
     </head>
     <body>
@@ -55,114 +55,133 @@
 
         <?php endif; ?>
 
-
-        <div id="graf_faturamento" style = "width: 550px; height: 400px; display:none; margin: 0 auto"> </div>
-        <script language="JavaScript">
-            $(document).ready(function () {
-                var title = {
-                    text: "Faturamento Mensal"
-                };
-                var subtitle = {
-                    text: 'Referência - 2017'
-                };
-                var xAxis = {
-                    categories: [<?php echo join($mes, ',') ?>]
-                };
-                var yAxis = {
-                    title: {
-                        text: 'Faturamento em Reais'
-                    },
-                    plotLines: [{
-                            value: 0,
-                            width: 1,
-                            color: '#808080'
-                        }]
-                };
-                var tooltip = {
-                    valueSuffix: ',00'
-                };
-                var legend = {
-                    layout: 'vertical',
-                    align: 'right',
-                    verticalAlign: 'middle',
-                    borderWidth: 0
-                };
-                var series = [
-                    {
-                        name: 'Faturamento - 2017',
-                        data: [<?php echo join($faturamento, ',') ?>]
-                    }
-                ];
-                var json = {};
-                json.title = title;
-                json.subtitle = subtitle;
-                json.xAxis = xAxis;
-                json.yAxis = yAxis;
-                json.tooltip = tooltip;
-                json.legend = legend;
-                json.series = series;
-                $('#graf_faturamento').highcharts(json);
-            });
-        </script>
-
-        <div id="graf_proposta" style="width: 550px; height: 400px; display:none; margin: 0 auto"></div>
-        <script language="JavaScript">
-            Highcharts.chart('graf_proposta', {
-                chart: {
-                    type: 'column'
-                },
-                title: {
-                    text: 'Número de Propostas Comerciais'
-                },
-                subtitle: {
-                    text: 'Propostas enviadas em 2017'
-                },
-                xAxis: {
-                    categories: [
-                        'Jan',
-                        'Feb',
-                        'Mar',
-                        'Apr',
-                        'May',
-                        'Jun',
-                        'Jul',
-                        'Aug',
-                        'Sep',
-                        'Oct',
-                        'Nov',
-                        'Dec'
-                    ],
-                    crosshair: true
-                },
-                yAxis: {
-                    min: 0,
-                    title: {
-                        text: 'Propostas por produto'
-                    }
-                },
-                tooltip: {
-                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                            '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
-                    footerFormat: '</table>',
-                    shared: true,
-                    useHTML: true
-                },
-                plotOptions: {
-                    column: {
-                        pointPadding: 0.2,
-                        borderWidth: 0
-                    }
-                },
-                series: [{
-                        name: 'Numero de Proposta',
-                        data: [<?php echo join($num_proposta, ',') ?>]
-                    }]
-            });
-        </script>  
-      
-    </body>
-     <?php include(FOOTER_TEMPLATE); ?>
+        <div class="card text-center">
+            <div class="card-header">
+                Gráfico de Faturamento
+            </div>
+            <div class="card-block">
+                <div id="graf_faturamento" style = "width: 550px; height: 400px; display:none; margin: 0 auto"> </div>
+                <script language="JavaScript">
+                    $(document).ready(function () {
+                        var title = {
+                            text: "Faturamento Mensal"
+                        };
+                        var subtitle = {
+                            text: 'Referência - 2017'
+                        };
+                        var xAxis = {
+                            categories: [<?php echo join($mes, ',') ?>]
+                        };
+                        var yAxis = {
+                            title: {
+                                text: 'Faturamento em Reais'
+                            },
+                            plotLines: [{
+                                    value: 0,
+                                    width: 1,
+                                    color: '#808080'
+                                }]
+                        };
+                        var tooltip = {
+                            valueSuffix: ',00'
+                        };
+                        var legend = {
+                            layout: 'vertical',
+                            align: 'right',
+                            verticalAlign: 'middle',
+                            borderWidth: 0
+                        };
+                        var series = [
+                            {
+                                name: 'Faturamento - 2017',
+                                data: [<?php echo join($faturamento, ',') ?>]
+                            }
+                        ];
+                        var json = {};
+                        json.title = title;
+                        json.subtitle = subtitle;
+                        json.xAxis = xAxis;
+                        json.yAxis = yAxis;
+                        json.tooltip = tooltip;
+                        json.legend = legend;
+                        json.series = series;
+                        $('#graf_faturamento').highcharts(json);
+                    });
+                </script>
+            </div>
+            <div class="card-footer text-muted">
+                2017
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                Gráfico de Faturamento
+            </div>
+            <div class="card-block">
+                <div id="graf_proposta" style="width: 550px; height: 400px; display:none; margin: 0 auto"></div>
+                <script language="JavaScript">
+                    Highcharts.chart('graf_proposta', {
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: 'Número de Propostas Comerciais'
+                        },
+                        subtitle: {
+                            text: 'Propostas enviadas em 2017'
+                        },
+                        xAxis: {
+                            categories: [
+                                'Jan',
+                                'Feb',
+                                'Mar',
+                                'Apr',
+                                'May',
+                                'Jun',
+                                'Jul',
+                                'Aug',
+                                'Sep',
+                                'Oct',
+                                'Nov',
+                                'Dec'
+                            ],
+                            crosshair: true
+                        },
+                        yAxis: {
+                            min: 0,
+                            title: {
+                                text: 'Propostas por produto'
+                            }
+                        },
+                        tooltip: {
+                            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                    '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+                            footerFormat: '</table>',
+                            shared: true,
+                            useHTML: true
+                        },
+                        plotOptions: {
+                            column: {
+                                pointPadding: 0.2,
+                                borderWidth: 0
+                            }
+                        },
+                        series: [{
+                                name: 'Numero de Proposta',
+                                data: [<?php echo join($num_proposta, ',') ?>]
+                            }]
+                    });
+                </script>  
+                <div class="card-footer text-muted">
+                    2017
+                </div>
+            </div>
+    
+        
+        </body>
+    <?php echo"<script>Mudarestado(" . $nivel . ")</script>"; ?>
+    <?php include(FOOTER_TEMPLATE); ?>
 </html>
 
 

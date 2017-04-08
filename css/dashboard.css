@@ -1,12 +1,9 @@
 #graf_faturamento{
-    width: 550px;
-    height: 400px; 
     display:none; 
-    margin: 0 auto
 }
 #graf_proposta{
     display: none;
 }
-#H1{
-    background-color: red;
+.card text-center{
+    margin-top: 150px;
 }

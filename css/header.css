@@ -3,8 +3,11 @@ body {
     padding-bottom: 20px;
 }
 #comercial{
-    display: block;
+    display: none;
 }
 #qualidade{
-    display: block;
+    display: none;
+}
+#sair{
+    display: none;
 }
