@@ -13,7 +13,6 @@
 
 
         <?php
-        // A sessão precisa ser iniciada em cada página diferente
         if (!isset($_SESSION))
             session_start();
 
@@ -66,8 +65,7 @@
                             </a>
                         </li>
                     </ul>
-                </div><!--/.navbar-collapse -->
-                
+                </div>
           
             </div>
         </nav>

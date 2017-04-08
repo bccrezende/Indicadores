@@ -3,9 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/Indicadores/inc/database.php</file>
-            <file>file:/C:/xampp/htdocs/Indicadores/index.php</file>
-            <file>file:/C:/xampp/htdocs/Indicadores/validacao.php</file>
+            <file>file:/C:/xampp/htdocs/indicadores/js/mudar_estado.js</file>
+            <file>file:/C:/xampp/htdocs/indicadores/dashboard.php</file>
+            <file>file:/C:/xampp/htdocs/indicadores/inc/header.php</file>
+            <file>file:/C:/xampp/htdocs/indicadores/css/dashboard.css</file>
+            <file>file:/C:/xampp/htdocs/indicadores/inc/footer.php</file>
+            <file>file:/C:/xampp/htdocs/indicadores/index.php</file>
         </group>
     </open-files>
 </project-private>
