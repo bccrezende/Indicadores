@@ -12,7 +12,7 @@
         <?php require_once DBAPI; ?>
 
         <?php include(HEADER_LOGIN); ?>
-        
+
 
         <div class="jumbotron">
 
@@ -31,7 +31,7 @@
                     <label for="email">Senha</label>
                     <div class="input-group">
                         <span class="input-group-addon">@</span>
-                        <input type="pass" class="form-control"
+                        <input type="password" class="form-control"
                                id="pass" name="password" placeholder="Insira sua Senha" required>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
             </form>
         </div> 
 
-       
+
 
         <?php include(FOOTER_TEMPLATE); ?>
     </body>

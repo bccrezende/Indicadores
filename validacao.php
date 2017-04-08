@@ -31,10 +31,23 @@ if ($query->num_rows > 0) {
     $_SESSION['UsuarioNome'] = $resultado['nome'];
     $_SESSION['UsuarioNivel'] = $resultado['nivel'];
     
+    $nivel = ($_SESSION['UsuarioNivel']);
+    
+    if ($nivel == '0'){
+        header("Location: dashboard.php");
+        exit;
+    }
+    if ($nivel == '1'){
+        header("Location: comercial.php");
+        exit;
+    }
+    if ($nivel == '2'){
+        header("Location: qualidade.php");
+        exit;
+    }
     
     // Redireciona o visitante
-    header("Location: dashboard.php");
-    exit;
+    
     
 }else {
     echo"<script>alert('Login inválido!');location.href=\"index.php\";</script>";
