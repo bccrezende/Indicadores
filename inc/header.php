@@ -8,14 +8,12 @@
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
 
         <link rel = "stylesheet" href = "<?php echo BASEURL; ?>css/bootstrap.min.css">
-        <link rel = "stylesheet" href = "<?php echo BASEURL; ?>css/style.css">
         <link rel = "stylesheet" href = "<?php echo BASEURL; ?>css/header.css">
         <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
         <script>
             function Mudarestado(id) {
                 e = document.getElementById(id);
-                alert(e);
                 document.getElementById("comercial").style.display = "none";
             }
         </script>
@@ -87,6 +85,7 @@
                         </li>
                     </ul>
                 </div><!--/.navbar-collapse -->
+                <a href = "<?php echo BASEURL; ?>/index.php" class="navbar-link">Sair</a>
             </div>
         </nav>
 
